@@ -1,0 +1,38 @@
+name: Support request
+description: Ask for help with Juicefall, report a bug, or share an idea.
+title: "[Support] "
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for playing Juicefall! This request is public, so please don't include personal details.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it about?
+      options:
+        - Something isn't working
+        - Purchases or Restore Purchases
+        - Scores, iCloud or Game Center
+        - An idea or suggestion
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: iPhone model and iOS version
+      placeholder: e.g. iPhone 15, iOS 26.1
+  - type: input
+    id: version
+    attributes:
+      label: Juicefall version
+      description: Shown at the bottom of Settings → About.
