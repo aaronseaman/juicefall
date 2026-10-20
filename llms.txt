@@ -20,8 +20,8 @@ Key facts:
 
 ## Pages
 
-- [About and FAQ](https://aaronseaman.github.io/juicefall/about.html): what the game is, what makes it different, when it comes out, what it costs, the modes, swaps and fruit
-- [Press kit](https://aaronseaman.github.io/juicefall/press.html): fact sheet, descriptions, screenshots, logo and preview video
-- [Support](https://aaronseaman.github.io/juicefall/support.html): how to play, purchases and restore, scores on a new iPhone
-- [Privacy policy](https://aaronseaman.github.io/juicefall/privacy.html)
-- [Terms of use](https://aaronseaman.github.io/juicefall/terms.html)
+- [About and FAQ](https://juicefall.com/about.html): what the game is, what makes it different, when it comes out, what it costs, the modes, swaps and fruit
+- [Press kit](https://juicefall.com/press.html): fact sheet, descriptions, screenshots, logo and preview video
+- [Support](https://juicefall.com/support.html): how to play, purchases and restore, scores on a new iPhone
+- [Privacy policy](https://juicefall.com/privacy.html)
+- [Terms of use](https://juicefall.com/terms.html)
