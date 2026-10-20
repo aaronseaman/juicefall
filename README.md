@@ -10,7 +10,8 @@ The public web pages for **Juicefall**, a falling-jelly puzzle for iPhone, serve
 | Privacy Policy | https://aaronseaman.github.io/juicefall/privacy.html | App Store Connect: App Privacy; the game's About screen |
 | Terms of Use | https://aaronseaman.github.io/juicefall/terms.html | The game's About screen; the App Store description |
 
-Support requests come in as GitHub issues through the form in `.github/ISSUE_TEMPLATE/support.yml`.
+Support requests come in by email (the address on the support page) or as GitHub issues through the form in
+`.github/ISSUE_TEMPLATE/support.yml`.
 
 Plain HTML and one stylesheet, with system fonts, light and dark. Edit a page, commit, and GitHub Pages publishes it
 within a minute. Keep the privacy policy in step with the one inside the game (its date and wording).
