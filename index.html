@@ -3,40 +3,143 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Juicefall</title>
-<meta name="description" content="Juicefall is a falling-jelly puzzle for iPhone where colors matter, not rows.">
+<title>Juicefall: Jelly Match Puzzle for iPhone</title>
+<meta name="description" content="Juicefall is a falling-jelly puzzle for iPhone where you match colors, not rows. Free to play, no ads, no subscription, and it plays offline.">
+<link rel="canonical" href="https://aaronseaman.github.io/juicefall/">
+<meta name="apple-itunes-app" content="app-id=6823235878">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Juicefall">
+<meta property="og:title" content="Juicefall: Jelly Match Puzzle for iPhone">
+<meta property="og:description" content="Match colors, not rows. Drop jelly shapes, swap to finish a match and set off juicy cascades. No ads, no subscription, plays offline.">
+<meta property="og:url" content="https://aaronseaman.github.io/juicefall/">
+<meta property="og:image" content="https://aaronseaman.github.io/juicefall/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Juicefall title over a fruit garden, with four smiling jellies">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/nunito-black.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["MobileApplication", "VideoGame"],
+  "name": "Juicefall",
+  "alternateName": "Juicefall: Jelly Match Puzzle",
+  "description": "Juicefall is a falling-jelly puzzle for iPhone where you match colors, not rows. Jelly shapes drop into a garden well; line up three or more jellies of one color in a row or column and they burst, and whatever falls after can match again. Three modes (Classic, Calm, Hectic) and a daily challenge. Free to play, with no ads, no subscription and no account; it plays offline.",
+  "url": "https://aaronseaman.github.io/juicefall/",
+  "installUrl": "https://apps.apple.com/app/id6823235878",
+  "sameAs": ["https://apps.apple.com/app/id6823235878"],
+  "image": "https://aaronseaman.github.io/juicefall/img/icon-512.png",
+  "screenshot": [
+    "https://aaronseaman.github.io/juicefall/img/shots/01-cascade-chain.jpg",
+    "https://aaronseaman.github.io/juicefall/img/shots/02-frankenfruit-blast.jpg",
+    "https://aaronseaman.github.io/juicefall/img/shots/07-menu-modes.jpg"
+  ],
+  "operatingSystem": "iOS 26.0 or later",
+  "applicationCategory": "GameApplication",
+  "applicationSubCategory": "Puzzle",
+  "genre": ["Puzzle", "Casual"],
+  "gamePlatform": "iPhone",
+  "playMode": "SinglePlayer",
+  "contentRating": "4+",
+  "softwareVersion": "1.0",
+  "inLanguage": ["en", "de", "es", "fr", "ja", "pt-BR"],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to download and play. Optional one-time in-app purchases for six fruit power-ups; no ads, no subscription."
+  },
+  "featureList": [
+    "Match three or more jellies of one color in a row or column; full rows do nothing",
+    "Cascades: what falls after a match can match again, and each step multiplies the points",
+    "Fruit power-ups made by bigger matches",
+    "Classic, Calm (no gravity) and Hectic modes",
+    "A daily challenge, the same puzzle for everyone",
+    "Game Center leaderboards and 27 achievements",
+    "No ads, no subscription, no account, no data collected",
+    "Plays offline",
+    "Color symbols, Reduce Motion and VoiceOver support"
+  ],
+  "author": { "@type": "Person", "name": "Aaron Seaman" },
+  "publisher": { "@type": "Person", "name": "Aaron Seaman" }
+}
+</script>
 </head>
-<body>
+<body class="home">
 <header>
   <nav aria-label="Site">
-    <a class="brand" href="./">Juice<span>fall</span></a>
+    <a class="brand" href="./" aria-current="page">Juice<span>fall</span></a>
+    <a href="about.html">About</a>
+    <a href="press.html">Press</a>
     <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
   </nav>
 </header>
-<main class="hero">
-  <h1>Juicefall</h1>
-  <p class="lead">A falling-jelly puzzle for iPhone where colors matter, not rows.</p>
-
-  <div class="card">
-    <p>Jelly shapes drop into a garden well. Line up three or more jellies of one color in a row or column and they
-    burst, and whatever was above falls and can match again. Full rows do nothing.</p>
-    <ul>
-      <li>Swap two jellies to finish a match, and chain cascades for bigger scores.</li>
-      <li>Make fruit with bigger matches: blueberries, oranges, strawberries, grapes and bananas, each with its own power.</li>
-      <li>New colors join as you level up.</li>
-      <li>Three ways to play: Classic, Calm and Hectic.</li>
-      <li>No ads, no account, and it plays offline.</li>
-    </ul>
+<main>
+  <div class="hero-art">
+    <img src="img/header-1200.jpg" srcset="img/header-1200.jpg 1200w, img/header-2400.jpg 2400w" sizes="(max-width: 1120px) 100vw, 1080px" width="1200" height="514" alt="Juicefall: the title over a fruit garden, with three smiling jellies running down the path">
   </div>
 
-  <p>Coming soon to the App Store for iPhone.</p>
+  <section class="pitch">
+    <h1>Match <em>colors</em>, not rows.</h1>
+    <p class="lead">Juicefall is a falling-jelly puzzle for iPhone. Line up three jellies of one color and they burst into juice, and whatever falls after can match again.</p>
+    <div class="get">
+      <a class="badge" href="https://apps.apple.com/app/id6823235878">
+        <img class="on-light" src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="162" height="54">
+        <img class="on-dark" src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us" alt="Download on the App Store" width="162" height="54">
+      </a>
+      <p class="facts">Free · No ads · No subscription · Plays offline</p>
+    </div>
+  </section>
+
+  <section class="shots" aria-label="Screenshots" tabindex="0">
+    <figure><img src="img/shots/01-cascade-chain.jpg" width="660" height="1434" alt="Match colors, not rows: a chain of two on a full board, every cascade multiplies your points"><figcaption>Match colors, not rows</figcaption></figure>
+    <figure><img src="img/shots/02-frankenfruit-blast.jpg" width="660" height="1434" loading="lazy" alt="Fuse fruit, blast the board: two fruit swapped together clear two columns and two rows"><figcaption>Fuse fruit, blast the board</figcaption></figure>
+    <figure><img src="img/shots/03-swap-window.jpg" width="660" height="1434" loading="lazy" alt="Swap to finish the match: glowing jellies show every swap"><figcaption>Swap to finish the match</figcaption></figure>
+    <figure><img src="img/shots/04-chain-x4.jpg" width="660" height="1434" loading="lazy" alt="Set off chain reactions: a chain of four, the points stack up"><figcaption>Set off chain reactions</figcaption></figure>
+    <figure><img src="img/shots/05-board-clear.jpg" width="660" height="1434" loading="lazy" alt="Clear the whole board for 5,000 points and a shower of confetti"><figcaption>Clear the whole board</figcaption></figure>
+    <figure><img src="img/shots/06-new-best.jpg" width="660" height="1434" loading="lazy" alt="Beat your best: a new best score and the top ten"><figcaption>Beat your best</figcaption></figure>
+    <figure><img src="img/shots/07-menu-modes.jpg" width="660" height="1434" loading="lazy" alt="Calm, Classic or Hectic, plus a new puzzle every day"><figcaption>Calm, Classic or Hectic</figcaption></figure>
+    <figure><img src="img/shots/08-store.jpg" width="660" height="1434" loading="lazy" alt="Buy once, keep forever: the fruit store, no ads and no subscription"><figcaption>Buy once, keep forever</figcaption></figure>
+  </section>
+
+  <section class="split">
+    <div class="phone">
+      <video src="video/preview.mp4" poster="video/preview-poster.jpg" width="540" height="1170" muted loop playsinline autoplay preload="metadata" aria-label="Eighteen seconds of play: a fruit clears a column, chains of two and five, and a board clear"></video>
+    </div>
+    <div>
+      <h2>Soft jellies, juicy chains</h2>
+      <p>Jelly shapes drop into a garden well. Slide and turn them, and line up three or more of one color in a row or a column. They burst, the jellies above fall, and a new match sets off the next. Every step of a cascade multiplies your points.</p>
+      <p>Full rows do nothing here. Color is what counts, so every drop is a small puzzle.</p>
+    </div>
+  </section>
+
+  <section class="features" aria-label="What's in the game">
+    <div class="card"><h3>Fruit with a job</h3><p>Bigger matches make fruit: a blueberry clears its row and a banana knocks jellies loose. Six more fruit do more, from an orange that clears its column to grapes that take a whole color.</p></div>
+    <div class="card"><h3>Three ways to play</h3><p>Classic speeds up every level. Calm has no gravity: shapes fall only when you drop them. Hectic levels up twice as fast.</p></div>
+    <div class="card"><h3>A puzzle a day</h3><p>The daily challenge is the same puzzle for everyone, every day, with its own record.</p></div>
+    <div class="card"><h3>Made for iPhone</h3><p>120 Hz on ProMotion iPhones, Game Center leaderboards and 27 achievements, and your records kept in iCloud.</p></div>
+    <div class="card"><h3>Made for everyone</h3><p>Color symbols, Reduce Motion and VoiceOver support. In English, French, German, Japanese, Portuguese and Spanish.</p></div>
+    <div class="card"><h3>Yours, and private</h3><p>No account and no tracking: the game collects no data. It plays offline, on a plane or underground.</p></div>
+  </section>
+
+  <section class="promise">
+    <h2>No ads. No subscription. Yours to keep.</h2>
+    <p>Every mode is free. After your first game, your next five have every fruit, so you can try them all. Each fruit is then a one-time purchase, all six together cost less, and Family Sharing is included.</p>
+    <p class="more"><a href="about.html">Questions and answers</a> · <a href="press.html">Press kit</a></p>
+  </section>
 </main>
 <footer>
-  <p>&copy; 2026 Aaron Seaman. <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+  <p>&copy; 2026 Aaron Seaman. <a href="about.html">About</a> · <a href="press.html">Press</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
   <p>Apple, the Apple logo, iPhone, App Store, Game Center and iCloud are trademarks of Apple Inc.</p>
 </footer>
+<script>
+  // Respect Reduce Motion: the preview waits for a tap instead of playing by itself.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const v of document.querySelectorAll("video[autoplay]")) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; }
+  }
+</script>
 </body>
 </html>

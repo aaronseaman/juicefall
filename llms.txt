@@ -1,0 +1,26 @@
+# Juicefall
+
+> Juicefall is a falling-jelly puzzle game for iPhone where you match colors, not rows. Free to play, with no ads, no subscription and no account; it collects no data and plays offline. Made by Aaron Seaman. On the App Store as "Juicefall: Jelly Match Puzzle".
+
+How it plays: jelly shapes drop into a garden well; the player slides and turns them. Three or more jellies of one color in a row or a column burst, and whatever falls after a match can match again, so one drop can set off a chain whose every step multiplies the points. Full rows do nothing. Bigger matches make fruit power-ups. Modes: Classic (speeds up every level), Calm (no gravity: shapes fall only when dropped), Hectic (levels up twice as fast), and a daily challenge that is the same puzzle for everyone.
+
+Key facts:
+
+- Platform: iPhone, iOS 26 or later
+- Price: free; six fruit power-ups are optional one-time in-app purchases (in the United States US$0.99 or US$1.99 each, or all six for US$5.99); the five games after the first have every fruit for free; Family Sharing included
+- Ads: none. Subscription: none. Account: none
+- Privacy: App Store privacy label "Data Not Collected"
+- Internet: not needed
+- Game Center: three leaderboards (Classic, Calm, Hectic) and 27 achievements; records sync through the player's iCloud
+- Accessibility: color symbols, Reduce Motion, VoiceOver
+- Languages: English, French, German, Japanese, Portuguese (Brazil), Spanish
+- Age rating: 4+
+- App Store: https://apps.apple.com/app/id6823235878
+
+## Pages
+
+- [About and FAQ](https://aaronseaman.github.io/juicefall/about.html): what the game is, how it differs from other falling-block games, what it costs, the modes and the fruit
+- [Press kit](https://aaronseaman.github.io/juicefall/press.html): fact sheet, descriptions, screenshots, logo and preview video
+- [Support](https://aaronseaman.github.io/juicefall/support.html): how to play, purchases and restore, scores on a new iPhone
+- [Privacy policy](https://aaronseaman.github.io/juicefall/privacy.html)
+- [Terms of use](https://aaronseaman.github.io/juicefall/terms.html)
