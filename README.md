@@ -9,7 +9,7 @@ only these pages: no app code or app assets.
 | Home | https://juicefall.com/ | App Store Connect: Marketing URL (optional) |
 | About and FAQ | https://juicefall.com/about.html | The facts search engines and AI assistants read |
 | Press | https://juicefall.com/press.html | The press kit, `press/juicefall-press-kit.zip` |
-| Support | https://juicefall.com/support.html | App Store Connect: Support URL; the game's About screen |
+| Support | https://juicefall.com/support.html | App Store Connect: Support URL; the game's About screen; `#report-an-ad` from Settings › Report an ad |
 | Privacy Policy | https://juicefall.com/privacy.html | App Store Connect: App Privacy; the game's About screen |
 | Terms of Use | https://juicefall.com/terms.html | The game's About screen; the App Store description |
 
@@ -25,6 +25,8 @@ commit, and GitHub Pages publishes it within a minute. Keep the privacy policy i
 
 - `app-store.js` shows "Coming to the App Store · November 2026" until Apple's lookup lists the app, then puts in
   Apple's badge and the App Store link by itself.
+- `app-ads.txt` is the authorized-sellers file AdMob checks against the developer website on the App Store page: one
+  line, the owner's publisher id. It must stay at the site root.
 - `llms.txt`, `robots.txt` and `sitemap.xml` are for search engines and AI assistants. The `*.txt` file named by a
   long hex key is the IndexNow key: after changing pages, send their addresses to `https://api.indexnow.org/indexnow`
   with that key.
