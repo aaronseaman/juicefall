@@ -10,7 +10,7 @@ Key facts:
 - Platform: iPhone, iOS 26 or later
 - Price: free, with ads; one in-app purchase, the full game (US$2.99 in the United States), removes the ads and adds six fruit power-ups; Family Sharing included
 - Ads: Google AdMob, a full-screen ad between games (at most once every few minutes) and a banner after a game, limited to general-audience content; the full game removes them. Subscription: none. Account: none
-- Privacy: no account and no analytics in the game itself; without the full game, Google's ad software collects data for the ads, with consent where the law requires it; the game does not ask for tracking permission
+- Privacy: the game itself sends nothing to the developer; without the full game, Google's ad software collects data for the ads and to see how the game performs, with consent where the law requires it, and the game asks once for tracking permission (App Tracking Transparency)
 - Internet: not needed
 - Game Center: three leaderboards (Classic, Calm, Hectic) and 27 achievements; records sync through the player's iCloud
 - Accessibility: every color a shape of its own; VoiceOver actions
