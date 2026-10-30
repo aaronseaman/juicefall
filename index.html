@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Juicefall: Juicy color match puzzle for iPhone</title>
-<meta name="description" content="Juicefall is a falling-jelly puzzle for iPhone where you match colors, not rows: chain cascades, bank swaps and fuse fruit. Coming November 2026. Free with ads, no subscription, plays offline.">
+<meta name="description" content="Juicefall is a juicy color match puzzle for iPhone: match jellies by color, not rows, chain cascades, bank swaps and fuse fruit. Coming November 2026.">
 <link rel="canonical" href="https://juicefall.com/">
 <meta name="apple-itunes-app" content="app-id=6823235878">
+<meta name="theme-color" content="#168BFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A1020" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Juicefall">
 <meta property="og:title" content="Juicefall: Juicy color match puzzle for iPhone">
@@ -15,131 +17,287 @@
 <meta property="og:image" content="https://juicefall.com/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Three pictures of Juicefall on iPhone: matching colors, a cascade and Quirky Play">
+<meta property="og:image:alt" content="The Juicefall title in jelly letters over the game's juice-splash art, with three iPhone screens of the game">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/nunito-black.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="img/title.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="img/hero/backdrop.webp" as="image" type="image/webp" media="(min-width: 721px) and (prefers-color-scheme: light)">
+<link rel="preload" href="img/hero/backdrop-720.webp" as="image" type="image/webp" media="(max-width: 720px) and (prefers-color-scheme: light)">
+<link rel="preload" href="img/hero/backdrop-dark.webp" as="image" type="image/webp" media="(min-width: 721px) and (prefers-color-scheme: dark)">
+<link rel="preload" href="img/hero/backdrop-dark-720.webp" as="image" type="image/webp" media="(max-width: 720px) and (prefers-color-scheme: dark)">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["MobileApplication", "VideoGame"],
-  "name": "Juicefall",
-  "description": "Juicefall is a falling-jelly puzzle for iPhone where you match colors, not rows. Jelly shapes drop into a narrow well; line up three or more jellies of one color in a row or column and they burst, and whatever falls after can match again. Every step of a cascade multiplies the points, banked swaps finish matches, and two fruit swapped together fuse into one with both powers. Three modes (Wild, Calm, Hectic, with freeze diamonds) and Quirky Play, a 90-second game with a new quirk each day. Coming to the App Store in November 2026. Free to play, with ads between games and one purchase, the full game, that removes them; no subscription and no account; it plays offline.",
-  "url": "https://juicefall.com/",
-  "installUrl": "https://apps.apple.com/app/id6823235878",
-  "sameAs": ["https://apps.apple.com/app/id6823235878", "https://www.facebook.com/juicefall", "https://www.youtube.com/@juicefall"],
-  "image": "https://juicefall.com/img/icon-512.png",
-  "screenshot": [
-    "https://juicefall.com/img/shots/01-colors.jpg",
-    "https://juicefall.com/img/shots/02-cascade.jpg",
-    "https://juicefall.com/img/shots/05-modes.jpg"
-  ],
-  "operatingSystem": "iOS 26.0 or later",
-  "applicationCategory": "GameApplication",
-  "applicationSubCategory": "Puzzle",
-  "genre": ["Puzzle", "Casual"],
-  "gamePlatform": "iPhone",
-  "playMode": "SinglePlayer",
-  "contentRating": "4+",
-  "softwareVersion": "1.1",
-  "inLanguage": ["en", "de", "es", "fr", "ja", "pt-BR"],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "description": "Free to download and play, with ads. One in-app purchase, the full game, removes the ads and adds six fruit; no subscription."
-  },
-  "featureList": [
-    "Match three or more jellies of one color in a row or column; full rows do nothing",
-    "Cascades: what falls after a match can match again, and each step multiplies the points",
-    "A swap meter that banks up to three swaps; glowing jellies show every swap that makes a match",
-    "Fruit power-ups made by the shape of a match; the blueberry and the banana come with every game, six more with the full game",
-    "Fruit fusion: two of a kind make a super fruit, three times as strong; with the full game, two different fruit make a kiwi with both powers, twice as strong",
-    "Wild, Calm (no gravity) and Hectic modes; in Hectic, a fruit that sets off a freeze diamond freezes the jellies round it for a few seconds",
-    "Quirky Play: a 90-second game with a new quirk each day, the same for everyone",
-    "Game Center leaderboards and 27 achievements",
-    "Light and dark appearance, each with its own palette",
-    "A Home Screen widget in two sizes; Siri and Shortcuts in English: \"Play Juicefall\", \"Open Quirky Play in Juicefall\"",
-    "Plays on iPhone Duo, on the outer display and on the inner one",
-    "One purchase for the full game, no subscription, no account",
-    "Plays offline",
-    "Every color a shape of its own, VoiceOver actions"
-  ],
-  "author": { "@type": "Person", "name": "Aaron Seaman" },
-  "publisher": { "@type": "Person", "name": "Aaron Seaman" }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://juicefall.com/#website",
+      "name": "Juicefall",
+      "url": "https://juicefall.com/",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://juicefall.com/#developer" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://juicefall.com/#developer",
+      "name": "Aaron Seaman",
+      "url": "https://juicefall.com/"
+    },
+    {
+      "@type": ["MobileApplication", "VideoGame"],
+      "@id": "https://juicefall.com/#app",
+      "name": "Juicefall",
+      "description": "Juicefall is a falling-jelly puzzle for iPhone where you match colors, not rows. Jelly shapes drop into a narrow well; line up three or more jellies of one color in a row or column and they burst, and whatever falls after can match again. Every step of a cascade multiplies the points, banked swaps finish matches, and two fruit swapped together fuse into one with both powers. Three modes (Wild, Calm, Hectic, with freeze diamonds) and Quirky Play, a 90-second game with a new quirk each day. Coming to the App Store in November 2026. Free to play, with ads between games and one purchase, the full game, that removes them; no subscription and no account; it plays offline.",
+      "url": "https://juicefall.com/",
+      "installUrl": "https://apps.apple.com/app/id6823235878",
+      "sameAs": ["https://apps.apple.com/app/id6823235878", "https://www.facebook.com/juicefall", "https://www.youtube.com/@juicefall"],
+      "image": "https://juicefall.com/img/icon-512.png",
+      "screenshot": [
+        "https://juicefall.com/img/shots/01-colors.jpg",
+        "https://juicefall.com/img/shots/02-cascade.jpg",
+        "https://juicefall.com/img/shots/04-quirky.jpg",
+        "https://juicefall.com/img/shots/05-modes.jpg"
+      ],
+      "operatingSystem": "iOS 26.0 or later",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Puzzle",
+      "genre": ["Puzzle", "Casual"],
+      "gamePlatform": "iPhone",
+      "playMode": "SinglePlayer",
+      "contentRating": "4+",
+      "softwareVersion": "1.1",
+      "inLanguage": ["en", "de", "es", "fr", "ja", "pt-BR"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free to download and play, with ads. One in-app purchase, the full game, removes the ads and adds six fruit; no subscription."
+      },
+      "featureList": [
+        "Match three or more jellies of one color in a row or column; full rows do nothing",
+        "Cascades: what falls after a match can match again, and each step multiplies the points",
+        "A swap meter that banks up to three swaps; glowing jellies show every swap that makes a match",
+        "Fruit power-ups made by the shape of a match; the blueberry and the banana come with every game, six more with the full game",
+        "Fruit fusion: two of a kind make a super fruit, three times as strong; with the full game, two different fruit make a kiwi with both powers, twice as strong",
+        "Wild, Calm (no gravity) and Hectic modes; in Hectic, a fruit that sets off a freeze diamond freezes the jellies round it for a few seconds",
+        "Quirky Play: a 90-second game with a new quirk each day, the same for everyone",
+        "Game Center leaderboards and 27 achievements",
+        "Light and dark appearance, each with its own palette",
+        "A Home Screen widget in two sizes; Siri and Shortcuts in English: \"Play Juicefall\", \"Open Quirky Play in Juicefall\"",
+        "Plays on iPhone Duo, on the outer display and on the inner one",
+        "One purchase for the full game, no subscription, no account",
+        "Plays offline",
+        "Every color a shape of its own, VoiceOver actions"
+      ],
+      "author": { "@id": "https://juicefall.com/#developer" },
+      "publisher": { "@id": "https://juicefall.com/#developer" }
+    }
+  ]
 }
 </script>
 </head>
 <body class="home">
-<header>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
   <nav aria-label="Site">
     <a class="brand" href="./" aria-current="page">Juice<span>fall</span></a>
+    <a class="anchor" href="#how">How it plays</a>
+    <a class="anchor" href="#fruit">Fruit</a>
+    <a class="anchor" href="#price">Price</a>
     <a href="about.html">About</a>
     <a href="press.html">Press</a>
     <a href="support.html">Support</a>
   </nav>
 </header>
-<main>
-  <div class="hero-art">
-    <img src="img/header-1200.jpg" srcset="img/header-1200.jpg 1200w, img/header-2400.jpg 2400w" sizes="(max-width: 1120px) 100vw, 1080px" width="1200" height="514" alt="Juicefall, in the game's own jelly letters: JUICE in red over FALL in orange, on blue">
-  </div>
 
-  <section class="pitch">
-    <h1>Match <em>colors</em>, not rows.</h1>
-    <p class="lead">Juicefall is a falling-jelly puzzle for iPhone. Line up three jellies of one color and they burst into juice, and whatever falls after can match again.</p>
-    <div class="get">
-      <span class="soon" data-app-store="badge"><small>Coming to the App Store</small><strong>November 2026</strong></span>
-      <p class="facts">Free with ads · No subscription · Plays offline</p>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">
+        <img class="hero-logo" src="img/title.webp" width="1100" height="608" fetchpriority="high" alt="Juicefall">
+        <span class="hero-line">Match <em>colors</em>, not rows.</span>
+      </h1>
+      <div class="hero-card">
+        <p class="hero-sub">A juicy color match puzzle for iPhone. Line up three jellies of one color, watch them burst into juice, and let whatever falls set off the next match.</p>
+        <div class="get">
+          <span class="soon" data-app-store="badge"><small>Coming to the App Store</small><strong>November 2026</strong></span>
+          <ul class="chips" aria-label="At a glance">
+            <li>Free with ads</li>
+            <li>One purchase, no subscription</li>
+            <li>Plays offline</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="hero-phones">
+      <img class="side" src="img/devices/04-quirky.webp" width="600" height="1224" alt="Juicefall on iPhone: today's Quirky Play card, 90 seconds to score">
+      <img class="front" src="img/devices/01-colors.webp" width="600" height="1224" alt="Juicefall on iPhone: a two-color pair falling into the well, its landing place outlined">
+      <img class="side" src="img/devices/06-dark.webp" width="600" height="1224" alt="Juicefall on iPhone in dark appearance: a pair falling onto the dark board">
     </div>
   </section>
 
-  <section class="shots" aria-label="Screenshots" tabindex="0">
-    <figure><img src="img/devices/01-colors.webp" width="600" height="1224" alt="Juicefall on iPhone: A two-color pair falling into the well, its landing place outlined"><figcaption><strong>Match colors</strong> Line up three of one color</figcaption></figure>
-    <figure><img src="img/devices/02-cascade.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: Grapes have taken a whole color and a chain of four follows, with a swap earned"><figcaption><strong>Cascades multiply</strong> What falls can match again <small>The grapes come with the Full Game</small></figcaption></figure>
-    <figure><img src="img/devices/03-swap.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: A shape has landed and glowing jellies show every swap that makes a match"><figcaption><strong>Bank a swap</strong> Glowing jellies show every match <small>The orange and the strawberry come with the Full Game</small></figcaption></figure>
-    <figure><img src="img/devices/04-quirky.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: Today's quirk: 90 seconds to score, 10 more for each board you clear"><figcaption><strong>Quirky Play</strong> A new quirk every day, 90 seconds</figcaption></figure>
-    <figure><img src="img/devices/05-modes.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The main menu: Wild, Calm and Hectic, Quirky Play and How to play"><figcaption><strong>Three ways to play</strong> Wild, Calm with no gravity, Hectic</figcaption></figure>
-    <figure><img src="img/devices/06-dark.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: A two-color pair falling into the well on the dark board"><figcaption><strong>Light and dark</strong> Each with its own colors</figcaption></figure>
-    <figure><img src="img/devices/07-tutorials.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The pineapple's tutorial"><figcaption><strong>One-minute tutorials</strong> One for each Full Game fruit</figcaption></figure>
-    <figure><img src="img/devices/08-store.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The store: the Full Game removes all ads and adds six fruits"><figcaption><strong>One purchase</strong> Removes ads, adds six fruits</figcaption></figure>
+  <section class="steps" id="how" aria-labelledby="how-title">
+    <h2 id="how-title">How it plays</h2>
+    <p class="intro">Easy to learn, and every drop is a small color puzzle.</p>
+    <ol>
+      <li><img class="bob" src="img/pieces/square.webp" width="256" height="256" alt="" loading="lazy"><h3>Drop</h3><p>Jelly shapes fall into a narrow well. Drag to move, tap to turn.</p></li>
+      <li><img class="bob" src="img/pieces/heart.webp" width="256" height="256" alt="" loading="lazy"><h3>Match</h3><p>Three or more of one color in a row or a column burst into juice. Full rows do nothing.</p></li>
+      <li><img class="bob" src="img/pieces/star.webp" width="256" height="256" alt="" loading="lazy"><h3>Chain</h3><p>What falls can match again, and every step of a cascade multiplies your points.</p></li>
+    </ol>
   </section>
 
-  <section class="split">
-    <figure class="phone">
-      <img src="img/devices/03-swap.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: the swap window, glowing jellies show every swap that makes a match">
+  <section class="spot tint-blue" aria-labelledby="cascade-title">
+    <figure class="device">
+      <img src="img/devices/02-cascade.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: grapes have taken a whole color and a chain of four follows, with a swap earned">
+      <figcaption>The grapes come with the Full Game</figcaption>
+    </figure>
+    <div class="spot-text">
+      <p class="eyebrow">Cascades</p>
+      <h2 id="cascade-title">One drop can set off a chain</h2>
+      <p>When jellies burst, the ones above fall straight down and can match again. Every step of a cascade multiplies the points, and a cascade three or five steps long earns you a swap.</p>
+    </div>
+  </section>
+
+  <section class="spot flip tint-warm" aria-labelledby="swap-title">
+    <figure class="device">
+      <img src="img/devices/03-swap.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: a shape has landed and glowing jellies show every swap that makes a match">
       <figcaption>The orange and the strawberry come with the Full Game</figcaption>
     </figure>
-    <div>
-      <h2>Soft jellies, juicy chains</h2>
-      <p>Jelly shapes drop into a narrow well. Slide and turn them, and line up three or more of one color in a row or a column. They burst, the jellies above fall, and a new match sets off the next. Every step of a cascade multiplies your points.</p>
-      <p>Landings and clears fill the swap meter, and you can bank three swaps. When a shape lands, glowing jellies show every swap that makes a match: tap one, and the chain goes on.</p>
+    <div class="spot-text">
+      <p class="eyebrow">Swaps</p>
+      <h2 id="swap-title">Bank a swap for the perfect moment</h2>
+      <p>Landings and clears fill the swap meter, and you can bank three. When a shape lands, glowing jellies show every swap that makes a match. Tap one and the chain goes on. A swap is used only when it scores.</p>
     </div>
   </section>
 
-
-  <section class="features" aria-label="What's in the game">
-    <div class="card"><h3>Colors, not rows</h3><p>Three or more jellies of one color, in a row or a column, burst into juice. Color is what counts, so every drop is a small puzzle.</p></div>
-    <div class="card"><h3>Cascades that multiply</h3><p>The jellies above fall straight down and can match again. Every step of a cascade multiplies your points.</p></div>
-    <div class="card"><h3>Swaps in the bank</h3><p>Fill the swap meter, bank up to three swaps, and spend one the moment a shape lands to finish a match.</p></div>
-    <div class="card"><h3>Fruit from matches</h3><p>Some matches make fruit: a blueberry clears its row and a banana knocks jellies off the board. The full game adds an orange that clears its column, a strawberry that bursts and grapes that take a whole color.</p></div>
-    <div class="card"><h3>Fuse two fruit</h3><p>Swap two of a kind together and they fuse into a super fruit, three times as strong. With the full game, two different fruit fuse into a kiwi with both powers, twice as strong.</p></div>
-    <div class="card"><h3>Wild, Calm or Hectic</h3><p>Wild speeds up every level. Calm has no gravity: drop each shape when you're ready. Hectic levels up twice as fast and brings freeze diamonds: when a fruit sets one off, the jellies round it freeze for a few seconds.</p></div>
-    <div class="card"><h3>Quirky Play</h3><p>A 90-second game with a new quirk each day, the same for everyone. Each board you clear adds 10 seconds.</p></div>
-    <div class="card"><h3>Made for iPhone</h3><p>Light and dark, each with its own palette. A Home Screen widget, Siri and Shortcuts, Game Center leaderboards and 27 achievements, and your records kept in iCloud.</p></div>
-    <div class="card"><h3>For everyone</h3><p>Every color a shape of its own, VoiceOver actions, six languages. No account, and it plays offline.</p></div>
+  <section class="spot tint-blue" aria-labelledby="modes-title">
+    <figure class="device">
+      <img src="img/devices/05-modes.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: the main menu with Wild, Calm and Hectic, Quirky Play and How to play">
+    </figure>
+    <div class="spot-text">
+      <p class="eyebrow">Three ways to play</p>
+      <h2 id="modes-title">Wild, Calm or Hectic</h2>
+      <dl class="modes">
+        <dt>Wild</dt><dd>Speeds up every level.</dd>
+        <dt>Calm</dt><dd>No gravity: each shape waits until you drop it, and swaps wait for you.</dd>
+        <dt>Hectic</dt><dd>Levels up twice as fast, with more fruit and freeze diamonds. <img class="inline-piece" src="img/pieces/diamond.webp" width="256" height="256" alt="A freeze diamond" loading="lazy"> When a fruit sets one off, the jellies round it freeze for a few seconds and can’t be swapped until they thaw.</dd>
+      </dl>
+    </div>
   </section>
 
-  <section class="promise">
-    <h2>Free with ads. One purchase. No subscription.</h2>
-    <p>Wild, Calm, Hectic, Quirky Play and the tutorials come with the download, and so do the blueberry and the banana, with ads: a full-screen one between games, at most every three minutes, and a banner on the card after a game. One purchase, the full game, removes the ads and adds the orange, strawberry, grapes, pineapple, dragon fruit and kiwi to Wild, Calm and Hectic. It is bought once, with Family Sharing.</p>
-    <p class="more"><a href="about.html">Questions and answers</a> · <a href="press.html">Press kit</a></p>
+  <section class="spot flip tint-warm" aria-labelledby="quirky-title">
+    <figure class="device">
+      <img src="img/devices/04-quirky.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: today's quirk, 90 seconds to score, 10 more for each board you clear">
+    </figure>
+    <div class="spot-text">
+      <p class="eyebrow">Quirky Play</p>
+      <h2 id="quirky-title">A new quirk every day</h2>
+      <p>A 90-second game with a twist that changes every day, the same for everyone. Every board you clear adds 10 seconds to the clock. Quirky Play is the same for every player, with or without the Full Game.</p>
+    </div>
+  </section>
+
+  <section class="fruit" id="fruit" aria-labelledby="fruit-title">
+    <h2 id="fruit-title">Fruit with a job</h2>
+    <p class="intro">The shape of a match makes fruit. Swap two of a kind together and they fuse into a super fruit, three times as strong.</p>
+    <ul class="fruit-grid">
+      <li><img class="bob" src="img/pieces/blueberry.webp" width="256" height="256" alt="" loading="lazy"><h3>Blueberry</h3><p>Four in a row. Clears its row.</p><span class="tag free">Free</span></li>
+      <li><img class="bob" src="img/pieces/banana.webp" width="256" height="256" alt="" loading="lazy"><h3>Banana</h3><p>A square of four yellow. Knocks jellies off the board.</p><span class="tag free">Free</span></li>
+      <li><img class="bob" src="img/pieces/orange.webp" width="256" height="256" alt="" loading="lazy"><h3>Orange</h3><p>Four in a column. Clears its column.</p><span class="tag">Full Game</span></li>
+      <li><img class="bob" src="img/pieces/strawberry.webp" width="256" height="256" alt="" loading="lazy"><h3>Strawberry</h3><p>An L or a T. Bursts a 3 by 3 area.</p><span class="tag">Full Game</span></li>
+      <li><img class="bob" src="img/pieces/grapes.webp" width="256" height="256" alt="" loading="lazy"><h3>Grapes</h3><p>Five in a line. Clear every jelly of one color.</p><span class="tag">Full Game</span></li>
+      <li><img class="bob" src="img/pieces/pineapple.webp" width="256" height="256" alt="" loading="lazy"><h3>Pineapple</h3><p>Comes now and then in your shapes. Turns every jelly of one color into another.</p><span class="tag">Full Game</span></li>
+      <li><img class="bob" src="img/pieces/dragonfruit.webp" width="256" height="256" alt="" loading="lazy"><h3>Dragon fruit</h3><p>Comes once pink has joined. Shuffles the jellies to find a match.</p><span class="tag">Full Game</span></li>
+      <li><img class="bob" src="img/pieces/kiwi.webp" width="256" height="256" alt="" loading="lazy"><h3>Kiwi</h3><p>Swap two different fruit together: both powers, twice as strong.</p><span class="tag">Full Game</span></li>
+    </ul>
+    <p class="note">Every Full Game fruit has a one-minute tutorial, free to everyone.</p>
+  </section>
+
+  <section class="gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">See it on iPhone</h2>
+    <div class="shots" tabindex="0" aria-label="Screenshots, scroll sideways">
+      <figure><img src="img/devices/01-colors.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: A two-color pair falling into the well, its landing place outlined"><figcaption><strong>Match colors</strong> Line up three of one color</figcaption></figure>
+      <figure><img src="img/devices/02-cascade.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: Grapes have taken a whole color and a chain of four follows, with a swap earned"><figcaption><strong>Cascades multiply</strong> What falls can match again <small>The grapes come with the Full Game</small></figcaption></figure>
+      <figure><img src="img/devices/03-swap.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: A shape has landed and glowing jellies show every swap that makes a match"><figcaption><strong>Bank a swap</strong> Glowing jellies show every match <small>The orange and the strawberry come with the Full Game</small></figcaption></figure>
+      <figure><img src="img/devices/04-quirky.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: Today's quirk: 90 seconds to score, 10 more for each board you clear"><figcaption><strong>Quirky Play</strong> A new quirk every day, 90 seconds</figcaption></figure>
+      <figure><img src="img/devices/05-modes.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The main menu: Wild, Calm and Hectic, Quirky Play and How to play"><figcaption><strong>Three ways to play</strong> Wild, Calm with no gravity, Hectic</figcaption></figure>
+      <figure><img src="img/devices/06-dark.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: A two-color pair falling into the well on the dark board"><figcaption><strong>Light and dark</strong> Each with its own colors</figcaption></figure>
+      <figure><img src="img/devices/07-tutorials.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The pineapple's tutorial"><figcaption><strong>One-minute tutorials</strong> One for each Full Game fruit</figcaption></figure>
+      <figure><img src="img/devices/08-store.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The store: the Full Game removes all ads and adds six fruits"><figcaption><strong>One purchase</strong> Removes ads, adds six fruits</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="extras" aria-labelledby="extras-title">
+    <h2 id="extras-title">Made for iPhone</h2>
+    <ul>
+      <li><img src="img/pieces/circle.webp" width="256" height="256" alt="" loading="lazy"><h3>Home Screen widget</h3><p>Small or medium. A tap starts a game.</p></li>
+      <li><img src="img/pieces/drop.webp" width="256" height="256" alt="" loading="lazy"><h3>Siri and Shortcuts</h3><p>Say “Play Juicefall” or “Open Quirky Play in Juicefall” (in English).</p></li>
+      <li><img src="img/pieces/star.webp" width="256" height="256" alt="" loading="lazy"><h3>Light and dark</h3><p>Two looks, each with its own palette.</p></li>
+      <li><img src="img/pieces/hexagon.webp" width="256" height="256" alt="" loading="lazy"><h3>Game Center</h3><p>Leaderboards for Wild, Calm and Hectic, and 27 achievements.</p></li>
+      <li><img src="img/pieces/flower.webp" width="256" height="256" alt="" loading="lazy"><h3>iCloud</h3><p>Your records follow you to a new iPhone.</p></li>
+      <li><img src="img/pieces/heart.webp" width="256" height="256" alt="" loading="lazy"><h3>Every color a shape</h3><p>Heart, square, circle, drop, star, hexagon and flower. VoiceOver can play too.</p></li>
+      <li><img src="img/pieces/square.webp" width="256" height="256" alt="" loading="lazy"><h3>Plays offline</h3><p>No account, and no connection needed to play.</p></li>
+      <li><img src="img/pieces/diamond.webp" width="256" height="256" alt="" loading="lazy"><h3>iPhone Duo</h3><p>Plays closed on the outer display or open on the inner one.</p></li>
+      <li><img src="img/pieces/blueberry.webp" width="256" height="256" alt="" loading="lazy"><h3>Six languages</h3><p>English, French, German, Japanese, Portuguese and Spanish.</p></li>
+    </ul>
+  </section>
+
+  <section class="price" id="price" aria-labelledby="price-title">
+    <h2 id="price-title">Free to play. One purchase for the full game.</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Free download</h3>
+        <p class="amount">Free</p>
+        <ul>
+          <li>Wild, Calm, Hectic and Quirky Play</li>
+          <li>The blueberry, the banana and super fruit</li>
+          <li>A one-minute tutorial for every fruit</li>
+          <li>Ads from Google: a full-screen ad between games, at most every three minutes, and a banner on the card after a game. Never during play.</li>
+        </ul>
+      </div>
+      <div class="plan full">
+        <h3>Full Game</h3>
+        <p class="amount">US$2.99 <small>once</small></p>
+        <ul>
+          <li>Removes all ads</li>
+          <li>Adds the orange, strawberry, grapes, pineapple, dragon fruit and kiwi to Wild, Calm and Hectic</li>
+          <li>One in-app purchase, no subscription</li>
+          <li>Family Sharing</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">The App Store sets the price in your country’s currency. Quirky Play and the tutorials are the same for everyone.</p>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Questions</h2>
+    <div class="faq-list">
+      <div><h3>What is Juicefall?</h3><p>A falling-jelly puzzle for iPhone where you match colors, not rows. Three or more jellies of one color in a row or a column burst, and whatever falls after can match again.</p></div>
+      <div><h3>When does it come out?</h3><p>Juicefall comes to the App Store for iPhone in November 2026, free to download.</p></div>
+      <div><h3>Is it free?</h3><p>Yes, with ads. One in-app purchase, the Full Game (US$2.99 in the United States), removes the ads and adds six fruits. There is no subscription.</p></div>
+      <div><h3>Does it work offline?</h3><p>Yes. The whole game plays with no connection; Game Center scores and iCloud records catch up when you are back online.</p></div>
+      <div><h3>Which iPhone models does it run on?</h3><p>iPhone with iOS 26 or later, iPhone Duo included.</p></div>
+      <div><h3>Who makes it?</h3><p>Juicefall is made by Aaron Seaman, an independent developer.</p></div>
+    </div>
+    <p class="more"><a href="about.html">All questions and answers</a> · <a href="press.html">Press kit</a> · <a href="support.html">Support</a></p>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <img class="closing-logo" src="img/title.webp" width="1100" height="608" loading="lazy" alt="">
+    <h2 id="closing-title">Coming to iPhone in November 2026</h2>
+    <p>Follow Juicefall for the launch.</p>
+    <div class="get">
+      <span class="soon" data-app-store="badge"><small>Coming to the App Store</small><strong>November 2026</strong></span>
+      <p class="follow"><a href="https://www.facebook.com/juicefall">Facebook</a> <a href="https://www.youtube.com/@juicefall">YouTube</a></p>
+    </div>
   </section>
 </main>
 <footer>
   <p>&copy; 2026 Aaron Seaman. <a href="about.html">About</a> · <a href="press.html">Press</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="https://www.facebook.com/juicefall">Facebook</a> · <a href="https://www.youtube.com/@juicefall">YouTube</a></p>
-  <p>Apple, the Apple logo, iPhone, App Store, Game Center and iCloud are trademarks of Apple Inc.</p>
+  <p>Apple, the Apple logo, iPhone, App Store, Game Center, iCloud and Siri are trademarks of Apple Inc.</p>
 </footer>
 <script src="app-store.js"></script>
 </body>

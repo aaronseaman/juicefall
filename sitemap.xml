@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://juicefall.com/</loc></url>
-  <url><loc>https://juicefall.com/about.html</loc></url>
-  <url><loc>https://juicefall.com/press.html</loc></url>
-  <url><loc>https://juicefall.com/support.html</loc></url>
-  <url><loc>https://juicefall.com/privacy.html</loc></url>
-  <url><loc>https://juicefall.com/terms.html</loc></url>
+  <url><loc>https://juicefall.com/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://juicefall.com/about.html</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://juicefall.com/press.html</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://juicefall.com/support.html</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://juicefall.com/privacy.html</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://juicefall.com/terms.html</loc><lastmod>2026-10-28</lastmod></url>
 </urlset>

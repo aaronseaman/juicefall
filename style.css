@@ -10,35 +10,47 @@
   font-display: swap;
   src: url("fonts/nunito-black.woff") format("woff");
 }
+/* Colours from the game's palette (docs/palette.md and Art.swift's Palette in the app's repository): each role a
+   bright value and the dark sheet's value; nothing for dark mode is made from a bright colour. */
 :root {
-  --bg: #fffaf2;
+  --bg: #fff8eb;          /* Warm Ivory */
   --card: #ffffff;
-  --ink: #1d2733;
-  --muted: #5d6875;
-  --line: #eadfcd;
-  --accent: #e2462f;
-  --accent-2: #f39a1f;
+  --ink: #12314d;         /* Deep Ocean */
+  --muted: #5d6b7e;       /* secondary text, as the game deepens it */
+  --line: #eadcc6;        /* card border */
+  --accent: #d81f4a;      /* the game's red for text */
+  --accent-2: #ad5f00;    /* the game's amber for text */
   --link: #0a6fd6;
+  --button-bg: #0a6fd6;
   --button-ink: #ffffff;
-  --sky: #d9ecff;
-  --shadow: 0 10px 30px rgba(60, 40, 10, 0.12);
-  --drop: drop-shadow(0 12px 16px rgba(60, 40, 10, 0.16));
+  --sky: #e3f3ff;         /* selected mode */
+  --warm: #fff0c9;        /* warm light */
+  --juice-blue: #168bfa;
+  --sky-low: #a3f0f1;
+  --glass: rgba(255, 248, 235, 0.86);
+  --shadow: 0 10px 30px rgba(18, 49, 77, 0.12);
+  --drop: drop-shadow(0 14px 18px rgba(18, 49, 77, 0.2));
   --display: "Nunito", -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Helvetica Neue", Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14181d;
-    --card: #1c2229;
-    --ink: #eef1f4;
-    --muted: #a3adb8;
-    --line: #2c343d;
-    --accent: #ff6a52;
-    --accent-2: #ffb347;
-    --link: #6cb6ff;
-    --button-ink: #0d1b2a;
-    --sky: #1a2633;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    --drop: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.55));
+    --bg: #0a1020;        /* the dark sky's top */
+    --card: #1a2335;      /* surface */
+    --ink: #f4faff;
+    --muted: #a3b4cf;
+    --line: #2a3a56;
+    --accent: #ff3756;
+    --accent-2: #ffaa1f;
+    --link: #3da6ff;
+    --button-bg: #2057c4; /* the dark primary button's face */
+    --button-ink: #f4faff;
+    --sky: #2a3a56;
+    --warm: #1a2335;
+    --juice-blue: #3da6ff;
+    --sky-low: #134ba8;
+    --glass: rgba(26, 35, 53, 0.86);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    --drop: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.6));
   }
 }
 * { box-sizing: border-box; }
@@ -86,88 +98,13 @@ a { color: var(--link); }
   display: inline-block;
   padding: 12px 20px;
   border-radius: 999px;
-  background: var(--link);
+  background: var(--button-bg);
   color: var(--button-ink);
   font-weight: 700;
   text-decoration: none;
 }
 
-/* The home page */
-.home main { max-width: 1080px; padding-top: 16px; }
-.hero-art {
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  aspect-ratio: 3840 / 1646;
-  background: var(--sky);
-}
-.hero-art img { width: 100%; height: 100%; object-fit: cover; }
-.pitch { max-width: 720px; margin: 28px auto 0; text-align: center; }
-.pitch h1 { font-size: 48px; margin-bottom: 10px; }
-.pitch h1 em {
-  font-style: normal;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.pitch .lead { margin: 0 auto; max-width: 600px; }
-.get { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 24px 0 8px; }
-.badge { display: inline-block; line-height: 0; }
-.badge img { height: 54px; width: auto; }
-.badge .on-dark { display: none; }
-@media (prefers-color-scheme: dark) {
-  .badge .on-light { display: none; }
-  .badge .on-dark { display: block; }
-}
-.soon {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 7px 22px 8px;
-  border-radius: 12px;
-  border: 1px solid #a6a6a6;
-  background: #000;
-  color: #fff;
-  line-height: 1.15;
-  text-decoration: none;
-}
-.soon small { font-size: 12px; letter-spacing: 0.02em; }
-.soon strong { font-family: var(--display); font-weight: 900; font-size: 22px; }
-@media (prefers-color-scheme: dark) {
-  .soon { background: #fff; color: #000; }
-}
-.facts { color: var(--muted); font-size: 15px; margin: 0; }
-
-.shots {
-  display: flex;
-  gap: 14px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 8px 20px 18px;
-  margin: 36px -20px 0;
-  scrollbar-width: thin;
-}
-/* each picture is Apple's iPhone with the game's screen inside, on a clear background */
-.shots figure { margin: 0; flex: 0 0 220px; scroll-snap-align: start; }
-.shots img { width: 220px; height: auto; aspect-ratio: 600 / 1224; filter: var(--drop); }
-.shots figcaption { margin-top: 12px; text-align: center; font-size: 15px; line-height: 1.35; color: var(--muted); }
-.shots figcaption strong { display: block; font-family: var(--display); font-weight: 900; font-size: 18px; color: var(--ink); }
-.shots figcaption small { display: block; margin-top: 4px; font-size: 13px; }
-
-.split { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: center; max-width: 900px; margin: 56px auto 0; }
-.phone { margin: 0; }
-.phone img { width: 100%; height: auto; aspect-ratio: 600 / 1224; filter: var(--drop); }
-.phone figcaption { margin-top: 10px; text-align: center; font-size: 13px; color: var(--muted); }
-.split h2 { margin-top: 0; font-size: 30px; }
-
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; margin: 56px auto 0; }
-.features .card { margin: 0; }
-.features p { margin: 0; color: var(--muted); font-size: 16px; }
-
-.promise { max-width: 720px; margin: 56px auto 0; text-align: center; }
-.promise h2 { font-size: 30px; margin-top: 0; }
-.more { text-align: center; margin: 28px 0 0; }
+/* The home page: home.css */
 
 /* Questions and answers, the press kit */
 .qa h2 { font-size: 21px; margin-top: 30px; }
@@ -187,24 +124,10 @@ footer {
   color: var(--muted);
   font-size: 14px;
 }
-.home footer { max-width: 1080px; margin-top: 56px; }
 footer a { color: var(--muted); }
 
-@media (max-width: 760px) {
-  .split { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
-  .phone { width: 240px; margin: 0 auto; }
-  .split h2 { font-size: 26px; }
-  .features { grid-template-columns: 1fr; margin-top: 40px; }
-}
 @media (max-width: 480px) {
-  .pitch h1 { font-size: 36px; }
   h1 { font-size: 28px; }
-  .hero-art { border-radius: 16px; margin: 0 -8px; }
-  .shots figure { flex-basis: 180px; }
-  .shots img { width: 180px; }
   dl.sheet { grid-template-columns: 1fr; gap: 0; }
   dl.sheet dd { margin-bottom: 8px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .shots { scroll-behavior: auto; }
 }
