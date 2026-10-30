@@ -23,7 +23,7 @@
         link.className = "soon";
         link.innerHTML = "<small>Pre-order on the</small><strong>App Store</strong>";
       } else {
-        link.textContent = preOrder ? "Pre-order: Juicefall: Jelly Match Puzzle" : "Juicefall: Jelly Match Puzzle";
+        link.textContent = preOrder ? "Pre-order Juicefall on the App Store" : "Juicefall on the App Store";
       }
       slot.replaceWith(link);
     });

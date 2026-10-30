@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Juicefall: Jelly Match Puzzle for iPhone</title>
+<title>Juicefall: Juicy color match puzzle for iPhone</title>
 <meta name="description" content="Juicefall is a falling-jelly puzzle for iPhone where you match colors, not rows: chain cascades, bank swaps and fuse fruit. Coming November 2026. Free with ads, no subscription, plays offline.">
 <link rel="canonical" href="https://juicefall.com/">
 <meta name="apple-itunes-app" content="app-id=6823235878">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Juicefall">
-<meta property="og:title" content="Juicefall: Jelly Match Puzzle for iPhone">
+<meta property="og:title" content="Juicefall: Juicy color match puzzle for iPhone">
 <meta property="og:description" content="Match colors, not rows. Chain cascades, bank swaps and fuse fruit. Coming to iPhone in November 2026: free with ads, no subscription.">
 <meta property="og:url" content="https://juicefall.com/">
 <meta property="og:image" content="https://juicefall.com/img/og.jpg">
@@ -26,8 +26,7 @@
   "@context": "https://schema.org",
   "@type": ["MobileApplication", "VideoGame"],
   "name": "Juicefall",
-  "alternateName": "Juicefall: Jelly Match Puzzle",
-  "description": "Juicefall is a falling-jelly puzzle for iPhone where you match colors, not rows. Jelly shapes drop into a narrow well; line up three or more jellies of one color in a row or column and they burst, and whatever falls after can match again. Every step of a cascade multiplies the points, banked swaps finish matches, and two fruit swapped together fuse into one with both powers. Three modes (Wild, Calm, Hectic) and Quirky Play, a 90-second game with a new quirk each day. Coming to the App Store in November 2026. Free to play, with ads between games and one purchase, the full game, that removes them; no subscription and no account; it plays offline.",
+  "description": "Juicefall is a falling-jelly puzzle for iPhone where you match colors, not rows. Jelly shapes drop into a narrow well; line up three or more jellies of one color in a row or column and they burst, and whatever falls after can match again. Every step of a cascade multiplies the points, banked swaps finish matches, and two fruit swapped together fuse into one with both powers. Three modes (Wild, Calm, Hectic, with freeze diamonds) and Quirky Play, a 90-second game with a new quirk each day. Coming to the App Store in November 2026. Free to play, with ads between games and one purchase, the full game, that removes them; no subscription and no account; it plays offline.",
   "url": "https://juicefall.com/",
   "installUrl": "https://apps.apple.com/app/id6823235878",
   "sameAs": ["https://apps.apple.com/app/id6823235878", "https://www.facebook.com/juicefall", "https://www.youtube.com/@juicefall"],
@@ -58,9 +57,12 @@
     "A swap meter that banks up to three swaps; glowing jellies show every swap that makes a match",
     "Fruit power-ups made by the shape of a match; the blueberry and the banana come with every game, six more with the full game",
     "Fruit fusion: two of a kind make a super fruit, three times as strong; with the full game, two different fruit make a kiwi with both powers, twice as strong",
-    "Wild, Calm (no gravity) and Hectic modes",
+    "Wild, Calm (no gravity) and Hectic modes; in Hectic, a fruit that sets off a freeze diamond freezes the jellies round it for a few seconds",
     "Quirky Play: a 90-second game with a new quirk each day, the same for everyone",
     "Game Center leaderboards and 27 achievements",
+    "Light and dark appearance, each with its own palette",
+    "A Home Screen widget in two sizes; Siri and Shortcuts in English: \"Play Juicefall\", \"Open Quirky Play in Juicefall\"",
+    "Plays on iPhone Duo, on the outer display and on the inner one",
     "One purchase for the full game, no subscription, no account",
     "Plays offline",
     "Every color a shape of its own, VoiceOver actions"
@@ -80,6 +82,10 @@
   </nav>
 </header>
 <main>
+  <div class="hero-art">
+    <img src="img/header-1200.jpg" srcset="img/header-1200.jpg 1200w, img/header-2400.jpg 2400w" sizes="(max-width: 1120px) 100vw, 1080px" width="1200" height="514" alt="Juicefall, in the game's own jelly letters: JUICE in red over FALL in orange, on blue">
+  </div>
+
   <section class="pitch">
     <h1>Match <em>colors</em>, not rows.</h1>
     <p class="lead">Juicefall is a falling-jelly puzzle for iPhone. Line up three jellies of one color and they burst into juice, and whatever falls after can match again.</p>
@@ -90,20 +96,21 @@
   </section>
 
   <section class="shots" aria-label="Screenshots" tabindex="0">
-    <figure><img src="img/shots/01-colors.jpg" width="660" height="1434" alt="Match colors: a two-color pair falling into the well, its landing place outlined"><figcaption>Match colors</figcaption></figure>
-    <figure><img src="img/shots/02-cascade.jpg" width="660" height="1434" loading="lazy" alt="Cascades multiply: grapes take a whole color and a chain of four follows, with a swap earned"><figcaption>Cascades multiply</figcaption></figure>
-    <figure><img src="img/shots/03-swap.jpg" width="660" height="1434" loading="lazy" alt="Bank a swap: glowing jellies show every swap that makes a match"><figcaption>Bank a swap</figcaption></figure>
-    <figure><img src="img/shots/04-quirky.jpg" width="660" height="1434" loading="lazy" alt="Quirky Play: today's quirk, 90 seconds to score, 10 more for each board you clear"><figcaption>Quirky Play</figcaption></figure>
-    <figure><img src="img/shots/05-modes.jpg" width="660" height="1434" loading="lazy" alt="Three ways to play: Wild, Calm with no gravity, and Hectic, on the main menu"><figcaption>Three ways to play</figcaption></figure>
-    <figure><img src="img/shots/06-dark.jpg" width="660" height="1434" loading="lazy" alt="Light and dark: a two-color pair falling into the well on the dark board"><figcaption>Light and dark</figcaption></figure>
-    <figure><img src="img/shots/07-tutorials.jpg" width="660" height="1434" loading="lazy" alt="One-minute tutorials: the pineapple's tutorial, one for each fruit the full game adds"><figcaption>One-minute tutorials</figcaption></figure>
-    <figure><img src="img/shots/08-store.jpg" width="660" height="1434" loading="lazy" alt="One purchase: the Full Game removes the ads and adds six fruits"><figcaption>One purchase</figcaption></figure>
+    <figure><img src="img/devices/01-colors.webp" width="600" height="1224" alt="Juicefall on iPhone: A two-color pair falling into the well, its landing place outlined"><figcaption><strong>Match colors</strong> Line up three of one color</figcaption></figure>
+    <figure><img src="img/devices/02-cascade.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: Grapes have taken a whole color and a chain of four follows, with a swap earned"><figcaption><strong>Cascades multiply</strong> What falls can match again <small>The grapes come with the Full Game</small></figcaption></figure>
+    <figure><img src="img/devices/03-swap.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: A shape has landed and glowing jellies show every swap that makes a match"><figcaption><strong>Bank a swap</strong> Glowing jellies show every match <small>The orange and the strawberry come with the Full Game</small></figcaption></figure>
+    <figure><img src="img/devices/04-quirky.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: Today's quirk: 90 seconds to score, 10 more for each board you clear"><figcaption><strong>Quirky Play</strong> A new quirk every day, 90 seconds</figcaption></figure>
+    <figure><img src="img/devices/05-modes.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The main menu: Wild, Calm and Hectic, Quirky Play and How to play"><figcaption><strong>Three ways to play</strong> Wild, Calm with no gravity, Hectic</figcaption></figure>
+    <figure><img src="img/devices/06-dark.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: A two-color pair falling into the well on the dark board"><figcaption><strong>Light and dark</strong> Each with its own colors</figcaption></figure>
+    <figure><img src="img/devices/07-tutorials.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The pineapple's tutorial"><figcaption><strong>One-minute tutorials</strong> One for each Full Game fruit</figcaption></figure>
+    <figure><img src="img/devices/08-store.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: The store: the Full Game removes all ads and adds six fruits"><figcaption><strong>One purchase</strong> Removes ads, adds six fruits</figcaption></figure>
   </section>
 
   <section class="split">
-    <div class="phone">
-      <img src="img/shots/03-swap.jpg" width="660" height="1434" loading="lazy" alt="The swap window: glowing jellies show every swap that makes a match">
-    </div>
+    <figure class="phone">
+      <img src="img/devices/03-swap.webp" width="600" height="1224" loading="lazy" alt="Juicefall on iPhone: the swap window, glowing jellies show every swap that makes a match">
+      <figcaption>The orange and the strawberry come with the Full Game</figcaption>
+    </figure>
     <div>
       <h2>Soft jellies, juicy chains</h2>
       <p>Jelly shapes drop into a narrow well. Slide and turn them, and line up three or more of one color in a row or a column. They burst, the jellies above fall, and a new match sets off the next. Every step of a cascade multiplies your points.</p>
@@ -111,21 +118,22 @@
     </div>
   </section>
 
+
   <section class="features" aria-label="What's in the game">
     <div class="card"><h3>Colors, not rows</h3><p>Three or more jellies of one color, in a row or a column, burst into juice. Color is what counts, so every drop is a small puzzle.</p></div>
     <div class="card"><h3>Cascades that multiply</h3><p>The jellies above fall straight down and can match again. Every step of a cascade multiplies your points.</p></div>
     <div class="card"><h3>Swaps in the bank</h3><p>Fill the swap meter, bank up to three swaps, and spend one the moment a shape lands to finish a match.</p></div>
     <div class="card"><h3>Fruit from matches</h3><p>Some matches make fruit: a blueberry clears its row and a banana knocks jellies off the board. The full game adds an orange that clears its column, a strawberry that bursts and grapes that take a whole color.</p></div>
     <div class="card"><h3>Fuse two fruit</h3><p>Swap two of a kind together and they fuse into a super fruit, three times as strong. With the full game, two different fruit fuse into a kiwi with both powers, twice as strong.</p></div>
-    <div class="card"><h3>Wild, Calm or Hectic</h3><p>Wild speeds up every level. Calm has no gravity: drop each shape when you're ready. Hectic levels up twice as fast and brings freeze diamonds.</p></div>
+    <div class="card"><h3>Wild, Calm or Hectic</h3><p>Wild speeds up every level. Calm has no gravity: drop each shape when you're ready. Hectic levels up twice as fast and brings freeze diamonds: when a fruit sets one off, the jellies round it freeze for a few seconds.</p></div>
     <div class="card"><h3>Quirky Play</h3><p>A 90-second game with a new quirk each day, the same for everyone. Each board you clear adds 10 seconds.</p></div>
-    <div class="card"><h3>Made for iPhone</h3><p>Light and dark appearance, a Home Screen widget, Game Center leaderboards and 27 achievements, and your records kept in iCloud.</p></div>
+    <div class="card"><h3>Made for iPhone</h3><p>Light and dark, each with its own palette. A Home Screen widget, Siri and Shortcuts, Game Center leaderboards and 27 achievements, and your records kept in iCloud.</p></div>
     <div class="card"><h3>For everyone</h3><p>Every color a shape of its own, VoiceOver actions, six languages. No account, and it plays offline.</p></div>
   </section>
 
   <section class="promise">
     <h2>Free with ads. One purchase. No subscription.</h2>
-    <p>Wild, Calm, Hectic, Quirky Play and the tutorials come with the download, and so do the blueberry and the banana, with ads between games. One purchase, the full game, removes the ads and adds the orange, strawberry, grapes, pineapple, dragon fruit and kiwi to Wild, Calm and Hectic. It is bought once, with Family Sharing.</p>
+    <p>Wild, Calm, Hectic, Quirky Play and the tutorials come with the download, and so do the blueberry and the banana, with ads: a full-screen one between games, at most every three minutes, and a banner on the card after a game. One purchase, the full game, removes the ads and adds the orange, strawberry, grapes, pineapple, dragon fruit and kiwi to Wild, Calm and Hectic. It is bought once, with Family Sharing.</p>
     <p class="more"><a href="about.html">Questions and answers</a> · <a href="press.html">Press kit</a></p>
   </section>
 </main>
